@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Portfolio.css">
+    <style>
+
+        
+        .aboutme-text {
+            align-items: flex-end;
+        }
+        .aboutme-photo { 
+            align-items: flex-start;
+            width: 150px; 
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            animation: grow 3s ease forwards;
+            animation-iteration-count: 1;
+        }
+        @keyframes grow {
+            from { 
+                width: 150px; 
+                height: 150px;
+            }
+            to { 
+                width: 300px; 
+                height: 300px;
+            }
+        }
+    </style>
 </head>
     <body>
         <section>
@@ -16,15 +42,15 @@
                 </nav>
             </div>
         </section>
-        <section class="aboutme">
-            <img src="Media/Backpacking.JPG" class="aboutme-photo" alt="About me">
+        <div class="aboutme">
+            <div><img src="Media/Backpacking.JPG" class="aboutme-photo" alt="About me"></div>
             <div class="aboutme-text">
-                <p>Hi — I'm Kelton Gardner. 
-                    I'm a student learning web development. 
+                <p> 
+                    My name is Kelton Gardner, I am a student at Grand Canyon University studying software development. 
                     <br>
                     <a href="contact.html">Contact Me</a>
                 </p>
             </div>
-        </section> 
+        </div> 
     </body>
 </html>
