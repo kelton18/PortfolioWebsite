@@ -6,67 +6,75 @@
     <title>Document</title>
     <link rel="stylesheet" href="Portfolio.css">
     <style>
-        /* .aboutme {
+        /* Main layout: image left, content right */
+        .profile-section {
             display: flex;
-            align-items: flex-start;
-            gap: 24px;
-            max-width: 100%;
-            padding: 16px;
-        } */
-        
-        .aboutme-text {
-            margin: 0;
-            font-size: 30px;
-            line-height: 1.5;
-            color: #eaeaea;
+            align-items: flex-start;   /* top-align content; use center if you prefer */
+            gap: 2rem;
+            flex-wrap: wrap;           /* stack on small screens */
+            margin: 1.5rem 0;
         }
 
+        /* Headshot image */
+        .headshot-photo {
+            height: 500px;
+            width: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Right side column */
+        .profile-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Table */
         .experience_table {
             border-collapse: collapse; 
             border: 1px solid #f5f5f5; 
+            width: 100%;
         }
-
         .experience_table th,
         .experience_table td {
             border: 1px solid #f5f5f5; 
             padding: 8px;
+            text-align: left;
         }
 
-        /* Hobbies section layout (moved here from about.css) */
+        /* Hobbies row: list + video side-by-side */
         .hobbies-row {
             display: flex;
             gap: 24px;
             align-items: flex-start;
             margin-top: 12px;
         }
-
-        .hobbies-row .aboutme-text {
+        .hobbies-list {
+            max-width: 45%;
+        }
+        .hobbies-list ul {
             list-style: disc;
             margin: 0;
             padding-left: 1.25rem;
-            max-width: 45%;
         }
-
-        .hobbies-media {
-            /* keep the video from stretching too wide */
+        .hobbies-media { 
             max-width: 55%;
         }
 
-        /* Responsive: stack on small screens */
-        @media (max-width: 640px) {
-            .hobbies-row {
-                flex-direction: column;
-            }
-
-            .hobbies-row .aboutme-text, .hobbies-media {
-                max-width: 100%;
-            }
+        .portfolio-video {
+            width: 300px;
+            height: auto;
         }
 
-        @media (max-width: 700px) {
-            .aboutme { flex-direction: column; align-items: center; }
-            .aboutme-photo img { max-width: 80%; }
-            .aboutme { padding: 8px; }
+        /* Responsive */
+        @media (max-width: 640px) {
+            .profile-section { flex-direction: column; }
+            .hobbies-row { flex-direction: column; }
+            .hobbies-list, .hobbies-media { max-width: 100%; }
+            .headshot-photo { height: 360px; } /* optional smaller image on mobile */
         }
     </style>
 </head>
@@ -79,50 +87,55 @@
             </nav>
         </div>
         <h1>About Me</h1>
-        <section> 
-            <div>
-                <img src="Media/Backpacking.JPG" class="aboutme-photo">
-            </div>
-            <h2>Work Experience:</h2>
-            <table class="experience_table">
-                <tr>
-                    <th>Work</th>
-                    <th>Technology</th>
-                    <th>Year</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>TJMAXX</td>
-                    <td>Cash register</td>
-                    <td>2023-2024</td>
-                    <td>Sales Associate</td>
-                </tr>
-                <tr>
-                    <td>Papa Murphy's</td>
-                    <td>Phone system</td>
-                    <td>2022</td>
-                    <td>Pizza maker</td>
-                </tr>
-            </table>        
-        </section>
+           <div class="profile-section">
+                <!-- Left: headshot -->
+                <img src="Media/Headshot.JPG" class="headshot-photo" alt="Headshot of Kelton">
 
-        <section>
-            <h2>Hobbies: </h2>
-            <div class="hobbies-row">
-                <ul class="aboutme-text">
-                    <li>Backpacking</li>
-                    <li>Photography</li>
-                    <li>Guitar</li>
-                    <li>Coding</li>
-                </ul>
+                <!-- Right: table + hobbies + video -->
+                <div class="profile-content">
+                    <h2>Work Experience:</h2>
+                    <table class="experience_table">
+                    <tr>
+                        <th>Work</th>
+                        <th>Technology</th>
+                        <th>Year</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>TJMAXX</td>
+                        <td>Cash register</td>
+                        <td>2023–2024</td>
+                        <td>Sales Associate</td>
+                    </tr>
+                    <tr>
+                        <td>Papa Murphy's</td>
+                        <td>Phone system</td>
+                        <td>2022</td>
+                        <td>Pizza maker</td>
+                    </tr>
+                    </table>
 
-                <div class="hobbies-media">
-                    <video width="320" height="240" controls>
-                        <source src="Media/backpacking.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <div class="hobbies-row">
+                    <div class="hobbies-list">
+                        <h2>Hobbies:</h2>
+                        <ul class="aboutme-text">
+                        <li>Backpacking</li>
+                        <li>Photography</li>
+                        <li>Guitar</li>
+                        <li>Coding</li>
+                        </ul>
+                    </div>
+
+                    <div class="hobbies-media">
+                        <video class="portfolio-video" controls>
+                            <source src="Media/backpacking.MP4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    </div>
+                </div>
                 </div>
             </div>
-        </section>
+        </div>
     </body>
 </html>

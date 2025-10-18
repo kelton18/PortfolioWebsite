@@ -5,29 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">    
     <style>
-
-        
-        .aboutme-text {
-            align-items: flex-end;
+       .aboutme {
+            text-align: center;
+            padding: 20px;
         }
-        .aboutme-photo { 
-            align-items: flex-start;
-            width: 150px; 
+
+        .aboutme-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* space between image and text */
+            flex-wrap: wrap; /* allows stacking on small screens */
+        }
+
+        .aboutme-photo {
+            width: 150px;
             height: 150px;
             object-fit: cover;
             border-radius: 10px;
-            animation: grow 3s ease forwards;
+            animation-name: grow;
+            animation-duration: 2s;
             animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
         }
+
+        .aboutme-text {
+            max-width: 400px;
+            text-align: left;
+        }
+
         @keyframes grow {
             from { 
                 width: 150px; 
                 height: 150px;
             }
             to { 
-                width: 300px; 
-                height: 300px;
+                width: 500px; 
+                height: 300px; 
             }
         }
     </style>
@@ -43,14 +60,17 @@
             </div>
         </section>
         <div class="aboutme">
-            <div><img src="Media/Backpacking.JPG" class="aboutme-photo" alt="About me"></div>
-            <div class="aboutme-text">
-                <p> 
-                    My name is Kelton Gardner, I am a student at Grand Canyon University studying software development. 
+            <h1>Kelton Gardner</h1>
+            <div class="aboutme-content">
+                <img src="Media/Backpacking.JPG" class="aboutme-photo" alt="About me">
+                <div class="aboutme-text">
+                <p>
+                    My name is Kelton Gardner, I am a student at Grand Canyon University studying software development.
                     <br>
                     <a href="contact.html">Contact Me</a>
                 </p>
+                </div>
             </div>
-        </div> 
+        </div>
     </body>
 </html>
