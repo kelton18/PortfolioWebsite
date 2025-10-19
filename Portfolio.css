@@ -1,6 +1,8 @@
 html, body {
 	height: 100%;
+	margin: 0;
 }
+
 body {
 	margin: 0;
 	display: flex;
@@ -10,11 +12,22 @@ body {
 	gap: 24px;
 	background-color: #2e2e2e;
 	color: #f5f5f5;
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .header-links a { 
-	color: #9ad1ff; 
+	color: #93ceff; 
 	font-size: 25px;
 	text-align: center;
 	margin: 0px;
@@ -24,73 +37,13 @@ body {
 }
 
 
-.aboutme {
-	display: flex;
-	align-items: flex-start;
-	gap: 24px;
-	max-width: 100%;
-	padding: 16px;
-}
-.aboutme-photo { 
-	width: 50%;
-	height: auto;
-	border-radius: 8px;
-	display: block;
-}
-.aboutme-text {
-	margin: 0;
-    font-size: 30px;
-	line-height: 1.5;
-	color: #eaeaea;
-}
 
-.experience_table {
-    border-collapse: collapse; 
-    border: 1px solid #f5f5f5; 
-}
 
-.experience_table th,
-.experience_table td {
-    border: 1px solid #f5f5f5; 
-    padding: 8px;
-}
 
-/* Hobbies section layout (moved here from about.css) */
-.hobbies-row {
-	display: flex;
-	gap: 24px;
-	align-items: flex-start;
-	margin-top: 12px;
-}
 
-.hobbies-row .aboutme-text {
-	list-style: disc;
-	margin: 0;
-	padding-left: 1.25rem;
-	max-width: 45%;
-}
 
-.hobbies-media {
-	/* keep the video from stretching too wide */
-	max-width: 55%;
-}
 
-/* Responsive: stack on small screens */
-@media (max-width: 640px) {
-	.hobbies-row {
-		flex-direction: column;
-	}
 
-	.hobbies-row .aboutme-text, .hobbies-media {
-		max-width: 100%;
-	}
-}
-
-@media (max-width: 700px) {
-	.aboutme { flex-direction: column; align-items: center; }
-	.aboutme-photo img { max-width: 80%; }
-	.aboutme { padding: 8px; }
-}
 
 
 
