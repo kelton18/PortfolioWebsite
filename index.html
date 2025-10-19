@@ -37,6 +37,30 @@
             text-align: left;
         }
 
+        .contact-button {
+            width: 100px;
+            height: 30px;
+            background-color: #2e2e2e;
+            color: #f5f5f5;
+            cursor: pointer;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            border-radius: 5px;
+            border: none;
+        }
+        .contact-button:hover {
+            background-color: #f5f5f5;
+        }
+
+        .contact-button:hover .contact-link {
+            color: #2e2e2e;
+        }
+
+        .contact-link {
+            color: #f5f5f5;
+            text-decoration: none;
+            transition: color 0.4 ease;
+        }
+
         @keyframes grow {
             from { 
                 width: 150px; 
@@ -67,7 +91,8 @@
                 <p>
                     My name is Kelton Gardner, I am a student at Grand Canyon University studying software development.
                     <br>
-                    <a href="contact.html">Contact Me</a>
+
+                    <button class="contact-button"><a href="contact.html" class="contact-link">Contact Me</a></button>
                 </p>
                 </div>
             </div>
