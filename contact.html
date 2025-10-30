@@ -4,8 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .form-input {
+            padding: 8px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px; 
+        }
+        .submit-btn:hover {
+            background-color: rgb(168, 168, 168);
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+            }
+        }
+        
+
+        
+        
+    </style>
 </head>
 <body>
+    <section>
+        <div class="header-links">
+            <nav>
+                <a href="gallery.html">Gallery</a> 
+                <a href="about.html">About</a> 
+                <a href="index.html">Home</a> 
+            </nav>
+        </div>
+    </section>
+
     
+    <section>
+        <h1>Contact</h1>
+        <div class="Name-Input">
+            <form action="#" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First name</label>
+                                <input class="form-input" type="text" id="first-name" name="first-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last name</label>
+                                <input class="form-input"  type="text" id="last-name" name="last-name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-input" type="text" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input class="form-input" type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea style="resize: vertical; min-height: 100px;" class="form-input" id="message" name="message" rows="5" placeholder="Enter your message here..."></textarea>
+                        </div>
+                    <button class="submit-btn" type="button" id="submit-btn">SUBMIT</button>
+            </form>
+            <p id="confirmation" style="display: none; color:green; font-weight: bold;">
+                Form submitted successfully!
+            </p>
+        </div>
+    </section>
+
+    <!-- Script doesn't actually submit the form yet -->
+    <script>
+        document.getElementById("submit-btn").addEventListener('click', () => {
+            document.getElementById("confirmation").style.display = "block"; 
+            document.getElementById("contact-form").reset();
+        })
+    </script>
 </body>
 </html>
