@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <style>
+        img {
+            width: 600px;
+            height: auto;
+        }
+        
+        .gallery {
+            column-count: 3;
+            column-gap: 12px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 12px;
+            display: block;
+            break-inside: avoid;
+        }
+
+        @media (max-width: 900px) {
+            .gallery { column-count: 2; }
+        }
+        @media (max-width: 600px) {
+            .gallery { column-count: 1; }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="header-links">
+            <nav>
+                <a href="index.html">Home</a> 
+                <a href="about.html">About</a> 
+                <a href="contact.html">Contact</a> 
+            </nav>
+        </div>
+    </section>
+
+    <div class="gallery">
+        <img src="Media/portfolio-1.jpg"></img>
+        <img src="Media/portfolio-2.jpg"></img>
+        <img src="Media/portfolio-3.jpg"></img>
+        <img src="Media/portfolio-4.jpg"></img>
+        <img src="Media/portfolio-5.jpg"></img>
+        <img src="Media/portfolio-6.jpg"></img>
+        <img src="Media/portfolio-7.jpg"></img>
+        <img src="Media/portfolio-8.jpg"></img>
+        <img src="Media/portfolio-9.jpg"></img>
+        <img src="Media/portfolio-10.jpg"></img>
+        <img src="Media/portfolio-11.jpg"></img>
+        <img src="Media/portfolio-12.jpg"></img>
+        <img src="Media/portfolio-13.jpg"></img>
+    </div>
+
+</body>
+</html>
