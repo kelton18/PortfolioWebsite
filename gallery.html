@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Portfolio.css">
+    <script src="Portfolio.js" defer></script>
     <style>
         img {
             width: 600px;
@@ -32,7 +33,10 @@
     </style>
 </head>
 <body>
-    <section>
+    <section class="heading">
+        <div>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
         <div class="header-links">
             <nav>
                 <a href="index.html">Home</a> 
@@ -43,20 +47,22 @@
     </section>
 
     <div class="gallery">
-        <img src="Media/portfolio-1.jpg"></img>
-        <img src="Media/portfolio-2.jpg"></img>
-        <img src="Media/portfolio-3.jpg"></img>
-        <img src="Media/portfolio-4.jpg"></img>
-        <img src="Media/portfolio-5.jpg"></img>
-        <img src="Media/portfolio-6.jpg"></img>
-        <img src="Media/portfolio-7.jpg"></img>
-        <img src="Media/portfolio-8.jpg"></img>
-        <img src="Media/portfolio-09.jpg"></img>
-        <img src="Media/portfolio-10.jpg"></img>
-        <img src="Media/portfolio-11.jpg"></img>
-        <img src="Media/portfolio-12.jpg"></img>
-        <img src="Media/portfolio-13.jpg"></img>
+        <img src="Media/portfolio-1.jpg" class="hidden"/>
+        <img src="Media/portfolio-2.jpg" class="hidden"/>
+        <img src="Media/portfolio-3.jpg" class="hidden"/>
+        <img src="Media/portfolio-4.jpg" class="hidden"/>
+        <img src="Media/portfolio-5.jpg" class="hidden"/>
+        <img src="Media/portfolio-6.jpg" class="hidden"/>
+        <img src="Media/portfolio-7.jpg" class="hidden"/>
+        <img src="Media/portfolio-8.jpg" class="hidden"/>
+        <img src="Media/portfolio-09.jpg" class="hidden"/>
+        <img src="Media/portfolio-10.jpg" class="hidden"/>
+        <img src="Media/portfolio-11.jpg" class="hidden"/>
+        <img src="Media/portfolio-12.jpg" class="hidden"/>
+        <img src="Media/portfolio-13.jpg" class="hidden"/>
     </div>
+
+    <script src="Portfolio.js"></script>
 
 </body>
 </html>
