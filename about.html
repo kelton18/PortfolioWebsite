@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Portfolio.css">
-     <script src="Portfolio.js" defer></script>  
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- YOUR CSS (now overrides Bootstrap) -->
+    <link rel="stylesheet" href="Portfolio.css">
+
+    <!-- jQuery (for hide/show) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        defer
+    ></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script> 
+
+    <!-- Your JS -->
+    <script src="Portfolio.js" defer></script>  
     <style>
         /* Main layout: image left, content right */
         .profile-section {
@@ -81,20 +105,66 @@
     </style>
 </head>
     <body>
-        <section>
-            <div>
-                <button id="theme-toggle">Toggle Theme</button>
-            </div>
-            <div class="header-links">
-                
-                <nav>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="index.html">Home</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-            </div>
-        </section>
+
+        <header class="header-links">
+            <nav class="nav nav-pills justify-content-center w-100">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+            <button id="theme-toggle" class="btn btn-outline-secondary">Theme</button>
+        </header>
         <h1>About Me</h1>
+
+        <main class="container my-5">
+            <div class="text-center mb-4">
+                <button id="toggle-projects" class="btn btn-outline-primary">
+                    Hide/Show Projects
+                </button>
+            </div>
+            <section id="projects-section" data-aos="fade-up">
+                <h2 class="text-center mb-4">Projects</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Mastermind Game</h5>
+                                <p class="card-text">
+                                    A master mind game coded in C# and implemented using Windows Forms.
+                                </p>
+                                <a href="https://github.com/kelton18/MasterMind" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Inventory Manger Program</h5>
+                                <p class="card-text">
+                                    Inventory manager application that handles input from a CSV file. 
+                                    Coded in C# and implemented in Windows Forms.
+                                </p>
+                                <a href="https://github.com/kelton18/MilestoneProject" class="btn btn-success">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Portfolio Website</h5>
+                                <p class="card-text">
+                                    This website! jQuery, Bootstrap, AOS, and basic JavaScript supported website. 
+                                </p>
+                                <a href="https://github.com/kelton18/PortfolioWebsite" class="btn btn-warning">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
            <div class="profile-section">
                 <!-- Left: headshot -->
                 <img src="Media/Headshot.JPG" class="headshot-photo" alt="Headshot of Kelton">

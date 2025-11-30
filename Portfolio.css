@@ -75,6 +75,13 @@ p {
 	text-decoration: none;
 }
 
+.header-links a.nav-link {
+	color: var(--text-color);
+}
+.header-links a.nav-link.active {
+	font-weight: 600;
+}
+
 .fade-in {
 	opacity: 1;
 	transform: translateY(0);
