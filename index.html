@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kelton Gardner</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
@@ -46,8 +46,8 @@
         }
 
         .aboutme-photo {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
             border-radius: 10px;
             animation-name: grow;
@@ -92,34 +92,36 @@
                 height: 150px;
             }
             to { 
-                width: 500px; 
-                height: 300px; 
+                width: 300px; 
+                height: 200px; 
             }
         }
     </style>
 </head>
     <body>
-        <header class="header-links">
-            <nav class="nav nav-pills justify-content-center w-100">
+        <!-- nav links -->
+       <header class="header-links d-flex justify-content-between align-items-center">
+            <nav class="nav nav-pills flex-grow-1">
+
+                <a class="nav-link me-auto" href="index.html">Gardner</a>
+
                 <a class="nav-link" href="gallery.html">Gallery</a>
-                <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="about.html">About</a>
+
             </nav>
-            <button id="theme-toggle" class="btn btn-outline-secondary">
-                Theme
-            </button>
+            <button id="theme-toggle" class="btn btn-outline-secondary ms-3">Theme</button>
         </header>
         <div class="aboutme">
             <h1 data-aos="zoom-in">Kelton Gardner</h1>
             <div class="aboutme-content">
                 <img src="Media/Backpacking.JPG" class="aboutme-photo" alt="About me">
                 <div class="aboutme-text">
-                <p data-aos="fade-up">
-                    My name is Kelton Gardner, I am a student at Grand Canyon University studying software development.
-                    <br>
-
-                    <button class="contact-button"><a href="contact.html" class="contact-link">Contact Me</a></button>
-                </p>
+                    <p data-aos="fade-up">
+                        My name is Kelton Gardner, I am a student at Grand Canyon University studying software development.
+                        <br>
+                        <button class="btn btn-secondary btn-sm mt-3"><a href="contact.html" class="contact-link">Contact Me</a></button>
+                    </p>
                 </div>
             </div>
         </div>

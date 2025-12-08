@@ -84,13 +84,18 @@
     </style>
 </head>
 <body>
-    <header class="header-links">
-        <nav class="nav nav-pills justify-content-center w-100">
-            <a class="nav-link" href="index.html">Home</a>
+    <!-- nav links -->
+    <header class="header-links d-flex justify-content-between align-items-center">
+        <nav class="nav nav-pills flex-grow-1">
+
+            <a class="nav-link me-auto" href="index.html">Gardner</a>
+
             <a class="nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-link" href="contact.html">Contact</a>
             <a class="nav-link" href="about.html">About</a>
+
         </nav>
-        <button id="theme-toggle" class="btn btn-outline-secondary">Theme</button>
+        <button id="theme-toggle" class="btn btn-outline-secondary ms-3">Theme</button>
     </header>
 
     
@@ -98,29 +103,29 @@
         <h1>Contact</h1>
         <div class="Name-Input">
             <form action="#" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first-name">First name</label>
-                                <input class="form-input" type="text" id="first-name" name="first-name">
-                            </div>
-                            <div class="form-group">
-                                <label for="last-name">Last name</label>
-                                <input class="form-input"  type="text" id="last-name" name="last-name">
-                            </div>
+                <div class="form-row">
+                    <div class="form-group mb-3">
+                        <label for="first-name">First name</label>
+                        <input class="form-input" type="text" id="first-name" name="first-name">
+                    </div>
+                        <div class="form-group mb-3">
+                            <label for="last-name">Last name</label>
+                            <input class="form-input"  type="text" id="last-name" name="last-name">
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input class="form-input" type="text" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input class="form-input" type="text" id="subject" name="subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea style="resize: vertical; min-height: 100px;" class="form-input" id="message" name="message" rows="5" placeholder="Enter your message here..."></textarea>
-                        </div>
-                    <button class="submit-btn" type="button" id="submit-btn">SUBMIT</button>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Email</label>
+                        <input class="form-input" type="text" id="email" name="email">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="subject">Subject</label>
+                        <input class="form-input" type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="message">Message</label>
+                        <textarea style="resize: vertical; min-height: 100px;" class="form-input" id="message" name="message" rows="5" placeholder="Enter your message here..."></textarea>
+                    </div>
+                <button class="btn btn-secondary" type="submit" id="submit-btn" >SUBMIT</button>
             </form>
             <p id="confirmation" style="display: none; color:green; font-weight: bold;">
                 Form submitted successfully!
