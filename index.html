@@ -108,6 +108,8 @@
                 <a class="nav-link" href="gallery.html">Gallery</a>
                 <a class="nav-link" href="contact.html">Contact</a>
                 <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="blog.html">Blog</a>
+
 
             </nav>
             <button id="theme-toggle" class="btn btn-outline-secondary ms-3">Theme</button>
@@ -119,11 +121,155 @@
                 <div class="aboutme-text">
                     <p data-aos="fade-up">
                         My name is Kelton Gardner, I am a student at Grand Canyon University studying software development.
+                        I love photography and I do Professional photo shoots!
                         <br>
                         <button class="btn btn-secondary btn-sm mt-3"><a href="contact.html" class="contact-link">Contact Me</a></button>
                     </p>
                 </div>
             </div>
+
+            <!-- Quote form -->
+            <form class="border rounded p-4 mt-4" action="https://postman-echo.com/post" method="POST" target="_blank">
+                <h3 class="mb-3">I do Professional Photography!</h3>
+                <p class="text-muted mb-4">Tell me a bit about your shoot and I'll follow up with a custom quote</p>
+
+                <!-- Contact info -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input for="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="preferredContact" class="form-label">Preferred Contact Method</label>
+                        <select class="form-select" id="preferredContact" name="preferredContact">
+                            <option value="email" selected>Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="either">Either is fine</option>
+                        </select> 
+                    </div> 
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="eventType" class="form-label">Type of Shoot</label>
+                        <select class="form-select" id="eventType" name="eventType" required>
+                            <option value="" disabled selected>Select one</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="engagement">Engagement</option>
+                            <option value="family">Family Session</option>
+                            <option value="senior">Senior Portraits</option>
+                            <option value="brand">Brand/Business</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="eventDate" class="form-label">Event Date</label>
+                        <input type="date" class="form-control" id="eventDate" name="eventDate">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="hoursNeeded" class="form-label">Hours of Coverage</label>
+                        <input type="number" class="form-control" id="hoursNeeded" name="hoursNeeded" min="1" max="12" placeholder="e.g. 4">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Submit Quote Request
+                </button>
+            </form>
+            <!-- Quote form -->
+
+            <!-- Services offered list -->
+            <h2 class="mb-3 mt-5">Services I Offer</h2>
+
+            <div class="accordion accordion-flush" id="servicesAccordion">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="service1">
+                        <button class="accordion-button collapsed bg-transparent px-0" type="button" 
+                            data-bs-toggle="collapse" data-bs-target="#collapse1">
+                            Wedding Photography
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body ps-0">
+                            Full wedding coverage with edited photos and opitonal add-ons.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="service2">
+                        <button class="accordion-button collapsed bg-transparent px-0" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse2">
+                            Engagement Sessions
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body ps-0">
+                            1-2 hour sessions as the location of your choice.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="service3">
+                        <button class="accordion-button collapsed bg-transparent px-0" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse3">
+                            Family Portraits
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body ps-0">
+                            Natural, relaxed family photography sessions.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+            <!-- Bacis Packages Table -->
+            <section class="mt-5">
+                <div class="pricing-table-wrapper">
+                    <h2 class="text-center mb-3">Basic Packages</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle mx-auto">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Package</th>
+                                    <th scope="col">Includes</th>
+                                    <th scope="col">Starting Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Essentials</td>
+                                    <td>1 hour, 1 location, 25 edited photos</td>
+                                    <td>$200</td>
+                                </tr>
+                                <tr>
+                                    <td>Standard</td>
+                                    <td>2 hours, 2 location, 50 edited photos</td>
+                                    <td>$600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+            
         </div>
     </body>
 </html>

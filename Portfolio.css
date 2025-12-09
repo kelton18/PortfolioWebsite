@@ -100,14 +100,20 @@ p  { font-size: 0.95rem; }
 	width: 100%;
 }
 
+.subscribe-form {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
 
+.pricing-table-wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
 
-
-
-
-
-
-
-
-
-
+.profile-wrapper {
+    display: flex;
+    align-items: center;     /* vertically centers text with image */
+    gap: 20px;               /* space between image and text */
+    margin-top: 30px;
+}

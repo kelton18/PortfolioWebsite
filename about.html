@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kelton Gardner</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
@@ -43,7 +43,7 @@
 
         /* Headshot image */
         .headshot-photo {
-            height: 500px;
+            height: 300px;
             width: auto;
             border-radius: 10px;
             object-fit: cover;
@@ -58,39 +58,7 @@
             gap: 1rem;
         }
 
-        /* Table */
-        .experience_table {
-            border-collapse: collapse; 
-            border: 1px solid #f5f5f5; 
-            width: 100%;
-        }
-        .experience_table th,
-        .experience_table td {
-            border: 1px solid #f5f5f5; 
-            padding: 8px;
-            text-align: left;
-        }
-
-        /* Hobbies row: list + video side-by-side */
-        .hobbies-row {
-            display: flex;
-            gap: 24px;
-            align-items: flex-start;
-            margin-top: 12px;
-        }
-        .hobbies-list {
-            max-width: 45%;
-        }
-        .hobbies-list ul {
-            list-style: disc;
-            margin: 0;
-            padding-left: 1.25rem;
-        }
-        .hobbies-media { 
-            max-width: 55%;
-        }
-
-        .portfolio-video {
+        .video-size {
             width: 300px;
             height: auto;
         }
@@ -114,11 +82,34 @@
                 <a class="nav-link" href="gallery.html">Gallery</a>
                 <a class="nav-link" href="contact.html">Contact</a>
                 <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="blog.html">Blog</a>
+
 
             </nav>
             <button id="theme-toggle" class="btn btn-outline-secondary ms-3">Theme</button>
         </header>
         <main class="container">
+             <!-- IMAGE + TEXT ROW -->
+            <section class="profile-section">
+                <!-- Left: Photo -->
+                <img src="Media/Headshot.JPG" class="headshot-photo" alt="Kelton">
+
+                <!-- Right: Text -->
+                <div class="profile-content">
+                    <h2>
+                        I enjoy coding, backpacking and photography. 
+                        I love building coding projects to solve problems I often face,
+                        while being creative.
+                    </h2>
+                </div>
+            </section>
+
+            <!-- VIDEO BELOW (stays where it is) -->
+            <div class="coffee-video text-center mt-4">
+                <video src="Media/coffee.mp4" controls class="video-size"></video>
+                <p class="mt-2 text-muted">I also love coffee!</p>
+            </div>
+
             <div class="text-center mb-3">
                 <button id="toggle-projects" class="btn btn-outline-primary">
                     Hide/Show Projects
@@ -166,55 +157,6 @@
                 </div>
             </section>
         </main>
-           <div class="profile-section">
-                <!-- Left: headshot -->
-                <img src="Media/Headshot.JPG" class="headshot-photo" alt="Headshot of Kelton">
-
-                <!-- Right: table + hobbies + video -->
-                <div class="profile-content">
-                    <h2>Work Experience:</h2>
-                    <table class="experience_table">
-                    <tr>
-                        <th>Work</th>
-                        <th>Technology</th>
-                        <th>Year</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>TJMAXX</td>
-                        <td>Cash register</td>
-                        <td>2023–2024</td>
-                        <td>Sales Associate</td>
-                    </tr>
-                    <tr>
-                        <td>Papa Murphy's</td>
-                        <td>Phone system</td>
-                        <td>2022</td>
-                        <td>Pizza maker</td>
-                    </tr>
-                    </table>
-
-                    <div class="hobbies-row">
-                    <div class="hobbies-list">
-                        <h2>Hobbies:</h2>
-                        <ul class="aboutme-text">
-                        <li>Backpacking</li>
-                        <li>Photography</li>
-                        <li>Guitar</li>
-                        <li>Coding</li>
-                        </ul>
-                    </div>
-
-                    <div class="hobbies-media">
-                        <video class="portfolio-video" controls>
-                            <source src="Media/backpacking.MP4" type="video/mp4">
-                                Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+                        
     </body>
 </html>

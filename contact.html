@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kelton Gardner</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
@@ -93,6 +93,8 @@
             <a class="nav-link" href="gallery.html">Gallery</a>
             <a class="nav-link" href="contact.html">Contact</a>
             <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
+
 
         </nav>
         <button id="theme-toggle" class="btn btn-outline-secondary ms-3">Theme</button>
@@ -102,7 +104,7 @@
     <section>
         <h1>Contact</h1>
         <div class="Name-Input">
-            <form action="#" id="contact-form">
+            <form action="https://postman-echo.com/post" method="POST" target="_blank" id="contact-form">
                 <div class="form-row">
                     <div class="form-group mb-3">
                         <label for="first-name">First name</label>
@@ -127,18 +129,7 @@
                     </div>
                 <button class="btn btn-secondary" type="submit" id="submit-btn" >SUBMIT</button>
             </form>
-            <p id="confirmation" style="display: none; color:green; font-weight: bold;">
-                Form submitted successfully!
-            </p>
         </div>
     </section>
-
-    <!-- Script doesn't actually submit the form yet -->
-    <script>
-        document.getElementById("submit-btn").addEventListener('click', () => {
-            document.getElementById("confirmation").style.display = "block"; 
-            document.getElementById("contact-form").reset();
-        })
-    </script>
 </body>
 </html>
